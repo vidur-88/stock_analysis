@@ -1,0 +1,22 @@
+Automotive
+Banking/Finance
+Cement/Construction
+Chemicals
+Conglomerates
+Cons Durable
+Cons Non-Durable
+Engineering
+Food Beverage
+Gold ETF
+Technology
+Manufacturing
+Media
+Metals Mining
+Miscellaneous
+Oil & Gas
+Pharmaceuticals
+Retail/Real Estate
+Services
+Telecom
+Tobacco
+Utilities
