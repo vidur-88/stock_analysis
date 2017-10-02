@@ -1,0 +1,45 @@
+# OS X
+.DS_Store
+
+# Python
+*.pyc
+
+# Django Settings file
+#settings.py
+
+# Development database
+#*.db
+
+# Eclipse/Aptana
+.settings
+
+# svn
+.svn
+
+# svn
+.json
+
+.settings
+# Emacs
+*~
+
+#log files
+*.log
+
+# PyCharm/IntelliJ
+.idea/*
+
+# Vagrant
+.vagrant/*
+
+# ENV folder
+ENV/*
+
+# Testing results
+.coverage
+test_db
+htmlcov/*
+lettucetests.xml
+
+# pid files
+*.pid
