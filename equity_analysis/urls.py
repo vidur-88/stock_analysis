@@ -1,7 +1,7 @@
-from django.conf.urls import patterns, url
-from equity_analysis.views import E
+from django.conf.urls import url
+from . import views
 
-
-urlpatterns = patterns('equity_analysis.views',
-                       url(r'', 'blog_comments', name='get_blog_comments'),
-                       )
+urlpatterns = [
+    url(r'all_companies', views.get_all_company_data),
+    url(r'company_data', views.get_company_data),
+]

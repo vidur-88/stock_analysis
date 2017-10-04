@@ -68,3 +68,8 @@ class FetchingData():
                 x = x.strftime('%Y-%m-%d')
                 resp[col].append({x: y})
         return resp
+
+
+if __name__ == '__main__':
+    params = {'exchange': 'NSE', 'symbol': 'PNB', 'num_of_months': 2}
+    print len(FetchingData(params).get_data()['Close'])
