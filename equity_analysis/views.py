@@ -2,7 +2,7 @@ from django.http import HttpResponse, HttpResponseServerError
 from rest_framework.decorators import api_view
 import ujson as json
 
-from equity_analysis.services import CompanyData, AllCompanyData
+from equity_analysis.services import CompanyData, AllCompanyData, SectorWiseData
 
 
 @api_view(['POST'])
@@ -52,7 +52,8 @@ def get_sectors_list(request):
 @api_view(['POST'])
 def get_sector_wise_data(request):
     try:
-        resp = None
+        params = json.loads(request.body)
+        resp = SectorWiseData(params).get_companies_data()
     except Exception as e:
         return HttpResponseServerError(json.dumps(
             {

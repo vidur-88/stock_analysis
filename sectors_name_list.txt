@@ -1,0 +1,59 @@
+Automobiles
+AutoAncillaries
+AirTransportServices
+AgroChemicals
+Chemicals
+Banks
+CapitalGoodsEE, CapitalGoods-ElectricalEquipment
+CapitalGoodsNEE, CapitalGoods-NonElectricalEquipment
+CFF, CstingsForgingFastners
+Cement
+CementProducts
+CeramicProducts
+ComputerEducation
+Construction
+ConsumerDurables
+CONG, CrudeOilNaturalGas
+DGJ, DiamondGemsJewellery
+DryCells
+EdibleOil
+Entertainment
+ETF
+Fertilizers
+FMCG
+Finance
+GasDistribution
+Healthcare
+HotelsRestaurants
+ITHardware
+ITSoftware
+IDO, InfrastructureDevelopersOperators
+Logistics
+Media
+MMP, MiningMineralProducts
+Miscellaneous
+NFM, NonFerrousMetals
+OilDrill
+Packaging
+PrintVarnish
+Paper
+Pharmaceuticals
+PPP, PlantationAndPlantationProducts
+PlasticProducts
+Petrochemicals
+PGD, PowerGenerationDistribution
+RGA, ReadymadeGarmentsApparells
+Retail
+Refineries
+Refractories
+Realty
+ShipBuilding
+Shipping
+Steel
+Sugar
+SCB, StockCommodityBrokers
+TelecomServices
+Trading
+Textiles
+TEI, TelecomEquipmentInfra
+Tyres

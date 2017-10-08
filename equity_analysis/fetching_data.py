@@ -30,6 +30,7 @@ class FetchingData():
             self.to_date = date.today()
             self.from_date = self.to_date + relativedelta(years=-1)
         elif self.from_date and not self.to_date:
+            self.from_date = datetime.strptime(self.from_date, "%Y-%m-%d").date()
             self.to_date = date.today()
         elif not self.from_date:
             if self.num_of_days:
@@ -38,6 +39,11 @@ class FetchingData():
             elif self.num_of_months:
                 self.to_date = date.today()
                 self.from_date = self.to_date + relativedelta(months=-self.num_of_months)
+        elif self.from_date and self.to_date:
+            self.from_date = datetime.strptime(self.from_date,
+                                               "%Y-%m-%d").date()
+            self.to_date = datetime.strptime(self.to_date,
+                                             "%Y-%m-%d").date()
 
     def __fetch_data(self):
         history_data = get_history(symbol=self.symbol,
