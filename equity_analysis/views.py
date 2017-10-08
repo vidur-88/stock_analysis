@@ -2,11 +2,29 @@ from django.http import HttpResponse, HttpResponseServerError
 from rest_framework.decorators import api_view
 import ujson as json
 
+from equity_analysis.services import CompanyData, AllCompanyData, SectorWiseData
+
+
+@api_view(['POST'])
+def get_all_company_data(request):
+    try:
+        params = json.loads(request.body)
+        resp = AllCompanyData(params).get_all_company_data()
+    except Exception as e:
+        return HttpResponseServerError(json.dumps(
+            {
+                'Error': 'Server Error',
+                'message': e.message
+            }
+        ))
+    return HttpResponse(json.dumps(resp))
+
 
 @api_view(['POST'])
 def get_company_data(request):
     try:
-        resp = None
+        params = json.loads(request.body)
+        resp = CompanyData().get_company_data(params)
     except Exception as e:
         return HttpResponseServerError(json.dumps(
             {
@@ -34,7 +52,8 @@ def get_sectors_list(request):
 @api_view(['POST'])
 def get_sector_wise_data(request):
     try:
-        resp = None
+        params = json.loads(request.body)
+        resp = SectorWiseData(params).get_companies_data()
     except Exception as e:
         return HttpResponseServerError(json.dumps(
             {
