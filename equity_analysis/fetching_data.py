@@ -70,7 +70,7 @@ class FetchingData():
             date_col = list(resp[col].index)
             data_col = list(resp[col])
             resp[col] = list()
-            for x, y in itertools.izip(date_col, data_col):
+            for x, y in itertools.zip_longest(date_col, data_col):
                 x = x.strftime('%Y-%m-%d')
                 resp[col].append({x: y})
         return resp
@@ -78,4 +78,4 @@ class FetchingData():
 
 if __name__ == '__main__':
     params = {'exchange': 'NSE', 'symbol': 'PNB', 'num_of_months': 2}
-    print len(FetchingData(params).get_data()['Close'])
+    print(len(FetchingData(params).get_data()['Close']))

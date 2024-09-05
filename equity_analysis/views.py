@@ -1,6 +1,6 @@
+import json
 from django.http import HttpResponse, HttpResponseServerError
 from rest_framework.decorators import api_view
-import ujson as json
 
 from equity_analysis.services import CompanyData, AllCompanyData, SectorWiseData
 
@@ -29,7 +29,7 @@ def get_company_data(request):
         return HttpResponseServerError(json.dumps(
             {
                 'Error': 'Server Error',
-                'message': e.message
+                'message': e.args
             }
         ))
     return HttpResponse(json.dumps(resp))
