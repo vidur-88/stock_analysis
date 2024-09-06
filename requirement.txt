@@ -9,3 +9,4 @@ nsepy==0.8
 ujson==1.35
 lxml==5.3.0
 urllib3==2.2.2
+celery==5.4.0

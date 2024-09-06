@@ -34,7 +34,7 @@ def get_nifty_index_stocks_data(nifty_index_name):
             result[index_data["indexName"]] = index_data
 
     if nifty_time and nifty_time[0]:
-        result["timestamp"] = datetime.strptime(nifty_time[0][0], "%b %d, %Y %H:%M:%S")
+        result["time_stamp"] = datetime.strptime(nifty_time[0][0], "%b %d, %Y %H:%M:%S")
     return result
 
 

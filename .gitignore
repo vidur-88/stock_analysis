@@ -43,3 +43,6 @@ lettucetests.xml
 
 # pid files
 *.pid
+
+# celery schedule file
+celerybeat-schedule
