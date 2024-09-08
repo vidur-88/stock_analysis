@@ -2,7 +2,6 @@ from datetime import date
 from pathlib import Path
 
 import pandas as pd
-from docutils.nodes import header
 
 base_path = "/var/log/capture_data/data_{}/{}"
 

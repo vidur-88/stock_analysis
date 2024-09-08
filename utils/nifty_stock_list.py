@@ -1,7 +1,5 @@
 from collections import defaultdict
-from datetime import datetime
 import pandas as pd
-from six import iteritems
 
 from utils.parse_panda_dict import parse_panda_to_dict
 
