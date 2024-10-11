@@ -29,11 +29,14 @@ def read_capture_data_in_range(from_date, to_date, data_type, index_name=""):
 
 
 if __name__ == "__main__":
-    date1 = date.today() - timedelta(2)
-    date2 = date1 + timedelta(1)
+    date1 = date.today() - timedelta(5)
+    date2 = date1 + timedelta(4)
     dd = read_capture_data_in_range(date1, date2, "nifty_stock", "NIFTY 50")
+    result = {}
     for sd, symbol in dd:
         if symbol == "NIFTY 50":
-            print(sd[["ltp", "high", "low", "yHigh", "yLow", "time_stamp"]], symbol)
+            result[symbol] = sd[["ltp", "high", "low", "yHigh", "yLow", "time_stamp"]].to_dict("records")
+            print(sd[["ltp", "high", "low", "yHigh", "yLow", "time_stamp"]].to_dict("records"), symbol)
         else:
+            result[symbol] = sd[["ltP", "high", "low", "wkhi", "wklo", "open", "previousClose", "dayEndClose", "trdVolM", "time_stamp"]].to_dict("records")
             print(sd[["ltP", "high", "low", "wkhi", "wklo", "open", "previousClose", "dayEndClose", "trdVolM", "time_stamp"]].to_dict("records"), symbol)
